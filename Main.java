@@ -16,13 +16,13 @@ public class Main {
 	
 	private static int[] sumValue;
 	
-	private static final String problemFilName = "test.txt";
+	private static final String problemFilName = "jeu_200_25_1.txt";
 	
 	public static void main(String[] args) {
 		System.out.println("Main: Starting readProblem()");
 		readProblem();
 		printProblemStat();
-		printProblem();
+		//printProblem();
 		
 		// Run GA
 		long start = System.currentTimeMillis();
@@ -166,7 +166,7 @@ public class Main {
 		
 		// sort large to small
 		sort(valueDensity);
-		printArray(valueDensity);
+		//printArray(valueDensity);
 		
 		int[] solution1 = new int[numObjects];
 		for(int i = 0; i < numObjects; i++)
@@ -181,15 +181,15 @@ public class Main {
 		int[] solution2 = new int[counter];
 		for(int i = 0; i < counter; i++){
 			solution2[i] = solution1[i];
-			System.out.print(solution2[i]+ " ");
+			//System.out.print(solution2[i]+ " ");
 		}
-		System.out.println();
+		//System.out.println();
 		sortInt(solution2);
 		
-		for(int i = 0; i < counter; i++){
-			System.out.print(solution2[i]+ " ");
-		}
-		System.out.println();
+		//for(int i = 0; i < counter; i++){
+			//System.out.print(solution2[i]+ " ");
+		//}
+		//System.out.println();
 		result = getFitness(solution2);
 		
 		return result;
